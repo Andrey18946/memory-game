@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #222;
+    color: white;
+}
+
+.title {
+    margin: 0;
+    font-size: 32px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.header-button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: white;
+    color: #222;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.header-button:hover {
+    opacity: 0.8;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+
+
+.card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+    cursor: pointer;
+    font-size: 40px;
+    overflow: hidden;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-front {
+    background-color: white;
+    opacity: 0;
+}
+
+.card-back {
+    background-color: #333;
+    color: white;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* ===== VICTORY MODAL ===== */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    min-width: 300px;
+    padding: 40px;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 36px;
+}
+
+.modal-text {
+    margin: 0;
+    font-size: 20px;
+}
